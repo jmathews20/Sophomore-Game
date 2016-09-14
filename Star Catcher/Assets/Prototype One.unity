@@ -598,6 +598,8 @@ MonoBehaviour:
   jumpSpeed: 15
   jumpCount: 0
   jumpCountMax: 2
+  slideDuration: 20
+  slideTime: 0.01
 --- !u!143 &932486171
 CharacterController:
   m_ObjectHideFlags: 0
@@ -689,7 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ecb7926a47490645a9af1b2d0bfbe4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slideDuration: 20
+  slideDuration: 50
   slideTime: 0.01
 --- !u!1 &1471951059
 GameObject:

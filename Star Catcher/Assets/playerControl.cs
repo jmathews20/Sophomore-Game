@@ -13,9 +13,37 @@ public class playerControl : MonoBehaviour {
     public float jumpSpeed = 1;
     public int jumpCount = 0;
     public int jumpCountMax = 2;
+    //Sliding Vars
+    public int slideDuration = 100;
+    public float slideTime = 0.01f;
+   
+    //Corountine for Sliding the character
+    IEnumerator Slide ()
+    {
+        //Set a temp var to the value of slideDuration
+        int durationTemp = slideDuration;
 
-	// Use this for initialization
-	void Start () {
+        float speedTemp = speed;
+        speed += speed;
+        //While loop runs "while" the slideDuration > 0
+        while (slideDuration > 0)
+        {
+            //Decrement the slideDuration
+            slideDuration--;
+            //yield "holds the Coroutine"
+            //return "sends to the Coroutine to do an operation while yielding"
+            //New "creates an instance of an object"
+            //WaitForSeconds is an object that waits for a duration of time
+            yield return new WaitForSeconds(slideTime);
+            print("Sliding");
+        }
+        speed = speedTemp;
+        slideDuration = durationTemp;
+    }
+
+
+    // Use this for initialization
+    void Start () {
 
         //This "Finds" the character controller component
         myCC = GetComponent<CharacterController>();
@@ -31,9 +59,23 @@ public class playerControl : MonoBehaviour {
             //adding the jumpSpeed var to the tempPos var
             tempPos.y = jumpSpeed;
         }
-        
+
+        //Start Sliding
+        if(Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.S))
+        {
+            //StartCoroutine is a function that calls a Coroutine
+            StartCoroutine(Slide());
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.S))
+        {
+            //StartCoroutine is a function that calls a Coroutine
+            StartCoroutine(Slide());
+        }
+
+
         //test if the character controller is grounded
-        if(myCC.isGrounded)
+        if (myCC.isGrounded)
         {
             //reset the jumpcount if grounded
             jumpCount = 0;
