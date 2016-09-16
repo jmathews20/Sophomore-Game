@@ -574,7 +574,6 @@ GameObject:
   - 23: {fileID: 932486172}
   - 143: {fileID: 932486171}
   - 114: {fileID: 932486170}
-  - 114: {fileID: 932486177}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -680,19 +679,6 @@ Transform:
   - {fileID: 2044302907}
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &932486177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 932486169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ecb7926a47490645a9af1b2d0bfbe4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slideDuration: 50
-  slideTime: 0.01
 --- !u!1 &1471951059
 GameObject:
   m_ObjectHideFlags: 0
