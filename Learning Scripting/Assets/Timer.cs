@@ -3,20 +3,24 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 
-    public float currentTime;
-    public float endTime = 20f;
+    public float currentTime = 0f;
+    public bool startTimer = false;
+    public float endTime = 10f;
 
-    void Start()
-    {
-        currentTime = Time.time;
-    }
 
     void Update ()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+            startTimer = true;
 
-        if (Input.GetKeyDown(KeyCode.Space) && (currentTime < endTime))
-            print("You Still Got Time!");
+        if (startTimer == true)
+            currentTime += Time.deltaTime;
 
+        if (currentTime >= endTime)
+        {
+            print("Reached Time Limit");
+            currentTime = endTime;
+        }
     }
 
 }
