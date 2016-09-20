@@ -1,5 +1,4 @@
 sceneSetups:
-- path: C:/Users/Jared/Documents/Sophomore-Game/Learning Scripting/Assets/If-Switch
-    Statements.unity
+- path: Assets/LevelRecycle.unity
   isLoaded: 1
   isActive: 1
