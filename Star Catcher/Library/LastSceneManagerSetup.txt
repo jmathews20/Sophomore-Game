@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LevelRecycle.unity
+- path: C:/Users/Jared/Documents/Sophomore-Game/Learning Scripting/Assets/Loops/Loops.unity
   isLoaded: 1
   isActive: 1
