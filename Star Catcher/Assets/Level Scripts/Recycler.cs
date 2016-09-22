@@ -7,11 +7,11 @@ public class Recycler : MonoBehaviour {
     public static Action<Recycler> RecycleAction;
     //Bools are set at false by default
     public bool canBeRecycled;
-    public Transform cube;
+    public Transform Terrain;
 
 	// Use this for initialization
 	void Start () {
-        cube = this.GetComponent<Transform>();
+        Terrain = this.GetComponent<Transform>();
         if (RecycleAction != null && canBeRecycled)
             RecycleAction(this);
 	}
