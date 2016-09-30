@@ -10,7 +10,7 @@ public class SendToRecycler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if(canRecycle)
+        if(canRecycle && SendThis != null)
             SendThis(this);
 	}
 
