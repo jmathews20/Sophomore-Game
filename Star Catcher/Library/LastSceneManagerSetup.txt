@@ -1,4 +1,4 @@
 sceneSetups:
-- path: 'Assets/Prototype #2/AI Test.unity'
+- path: 'Assets/Prototype #2/Flippin Script!.unity'
   isLoaded: 1
   isActive: 1

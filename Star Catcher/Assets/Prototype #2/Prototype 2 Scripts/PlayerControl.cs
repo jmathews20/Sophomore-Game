@@ -42,6 +42,10 @@ public class PlayerControl : MonoBehaviour
         slideDuration = durationTemp;
     }
 
+    void StartGameHandler ()
+    {
+        GameControl.StartGame -= StartGameHandler;
+    }
 
     // Use this for initialization 
     void Start()
@@ -49,6 +53,7 @@ public class PlayerControl : MonoBehaviour
 
         //This "Finds" the character controller component 
         myCC = GetComponent<CharacterController>();
+        GameControl.StartGame += StartGameHandler;
     }
 
     // Update is called once per frame 

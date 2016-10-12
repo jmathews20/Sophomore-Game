@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAgent : MonoBehaviour {
-
-    public NavMeshAgent myAgent;
-    public Transform player;
+public class CameraFollow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,8 +10,7 @@ public class EnemyAgent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-        myAgent.destination
 
+	
 	}
 }
