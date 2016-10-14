@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraMove : MonoBehaviour {
 
-	public float cameraMoveSpeed = 4f;
+	public float cameraMoveSpeed = 8f;
 	private Vector3 tempPos;
 	
 	// Update is called once per frame

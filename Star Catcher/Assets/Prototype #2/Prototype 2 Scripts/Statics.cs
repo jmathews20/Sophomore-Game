@@ -2,6 +2,6 @@
 {
 
     public static float distance = 80;
-    public static float nextPosition = 240;
+    public static float nextPosition = 160;
 
 }

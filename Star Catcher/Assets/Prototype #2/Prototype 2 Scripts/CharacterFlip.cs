@@ -11,7 +11,7 @@ public class CharacterFlip : MonoBehaviour {
     {
         switch (_keyCode)
         {
-            case KeyCode.RightArrow:
+            case KeyCode.LeftArrow:
                 if (forward)
                 {
                     characterArt.Rotate(0, 180, 0);
@@ -19,7 +19,7 @@ public class CharacterFlip : MonoBehaviour {
                 }
                 break;
 
-            case KeyCode.LeftArrow:
+            case KeyCode.RightArrow:
                 if (!forward)
                 {
                     characterArt.Rotate(0, 180, 0);

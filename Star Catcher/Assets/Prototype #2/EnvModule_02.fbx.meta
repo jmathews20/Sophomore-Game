@@ -1,34 +1,36 @@
 fileFormatVersion: 2
-guid: 9068b8d01455b3545bc73c2beb40f7b4
-timeCreated: 1475868683
-licenseType: Pro
+guid: b5dacdc6d06edf9458ed76f146dd0d93
+timeCreated: 1475975609
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     100002: group3
-    100004: pCube10
-    100006: pCube11
-    100008: pCube12
-    100010: pCube3
-    100012: pCube4
-    100014: pCube5
-    100016: pCube6
-    100018: pCube7
-    100020: pCube8
-    100022: pCube9
+    100004: group4
+    100006: pCube10
+    100008: pCube11
+    100010: pCube12
+    100012: pCube3
+    100014: pCube4
+    100016: pCube5
+    100018: pCube6
+    100020: pCube7
+    100022: pCube8
+    100024: pCube9
     400000: //RootNode
     400002: group3
-    400004: pCube10
-    400006: pCube11
-    400008: pCube12
-    400010: pCube3
-    400012: pCube4
-    400014: pCube5
-    400016: pCube6
-    400018: pCube7
-    400020: pCube8
-    400022: pCube9
+    400004: group4
+    400006: pCube10
+    400008: pCube11
+    400010: pCube12
+    400012: pCube3
+    400014: pCube4
+    400016: pCube5
+    400018: pCube6
+    400020: pCube7
+    400022: pCube8
+    400024: pCube9
     2300000: pCube10
     2300002: pCube11
     2300004: pCube12
@@ -67,7 +69,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
