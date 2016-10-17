@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
     public int slideDuration = 100;
     public float slideTime = 0.01f;
 
+    private Animator anim;
+
     //Corountine for Sliding the character 
     IEnumerator Slide()
     {
@@ -49,6 +51,7 @@ public class PlayerControl : MonoBehaviour
 
         //This "Finds" the character controller component 
         myCC = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame 
@@ -66,8 +69,10 @@ public class PlayerControl : MonoBehaviour
         //Start Sliding 
         if (Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.S))
         {
+            anim.SetBool("Idle", false);
             //StartCoroutine is a function that calls a Coroutine 
             StartCoroutine(Slide());
+
         }
 
         if (Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.S))

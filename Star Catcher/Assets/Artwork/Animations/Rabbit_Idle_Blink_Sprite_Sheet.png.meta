@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 967ac5f41c11dd04f9596fddabb49f90
+timeCreated: 1476583012
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Rabbit_Idle_Blink_Sprite_Sheet_0
+    21300002: Rabbit_Idle_Blink_Sprite_Sheet_1
+    21300004: Rabbit_Idle_Blink_Sprite_Sheet_2
+    21300006: Rabbit_Idle_Blink_Sprite_Sheet_3
+    21300008: Rabbit_Idle_Blink_Sprite_Sheet_4
+    21300010: Rabbit_Idle_Blink_Sprite_Sheet_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 158
+        width: 1610
+        height: 1353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.465622, y: 119.051254}
+        - {x: 37.465622, y: 117.051254}
+        - {x: 24.465622, y: 119.051254}
+        - {x: 16.465622, y: 119.051254}
+        - {x: 17.465622, y: 77.051254}
+        - {x: 22.465622, y: 54.051254}
+        - {x: -121.53438, y: 45.051254}
+        - {x: -138.53438, y: 15.051254}
+        - {x: -140.53438, y: 7.0512543}
+        - {x: -140.53438, y: -117.948746}
+        - {x: 115.46562, y: -117.948746}
+        - {x: 141.46562, y: -44.948746}
+        - {x: 141.46562, y: 7.0512543}
+        - {x: 48.465622, y: 119.051254}
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 158
+        width: 1604
+        height: 1342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45.25125, y: -116.948746}
+        - {x: 61.25125, y: -114.948746}
+        - {x: 65.25125, y: -105.948746}
+        - {x: 140.25125, y: -43.948746}
+        - {x: 140.25125, y: 33.051254}
+        - {x: 53.25125, y: 118.051254}
+        - {x: -25.748749, y: 118.051254}
+        - {x: -139.74875, y: 24.051254}
+        - {x: -139.74875, y: -116.948746}
+        - {x: -99.74875, y: -116.948746}
+        - {x: -98.74875, y: -108.948746}
+        - {x: -90.74875, y: -113.948746}
+        - {x: -84.74875, y: -116.948746}
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 4215
+        y: 158
+        width: 1610
+        height: 1336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21.9906, y: 117.551254}
+        - {x: 19.9906, y: 104.551254}
+        - {x: 23.9906, y: 52.551254}
+        - {x: 45.9906, y: 36.551254}
+        - {x: 50.9906, y: 32.551254}
+        - {x: -126.0094, y: 63.551254}
+        - {x: -140.0094, y: 33.551254}
+        - {x: -140.0094, y: -116.448746}
+        - {x: 140.9906, y: -116.448746}
+        - {x: 141.9906, y: -109.448746}
+        - {x: 141.9906, y: 54.551254}
+        - {x: 61.9906, y: 117.551254}
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 6198
+        y: 158
+        width: 1604
+        height: 1342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 41.276245, y: 118.051254}
+        - {x: 40.276245, y: 117.051254}
+        - {x: 38.276245, y: 101.051254}
+        - {x: 38.276245, y: 95.051254}
+        - {x: 28.276245, y: 112.051254}
+        - {x: 25.276245, y: 118.051254}
+        - {x: 23.276245, y: 118.051254}
+        - {x: -139.72375, y: 40.051254}
+        - {x: -139.72375, y: -116.948746}
+        - {x: 64.276245, y: -116.948746}
+        - {x: 141.27625, y: -70.948746}
+        - {x: 141.27625, y: 53.051254}
+        - {x: 71.276245, y: 118.051254}
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 8175
+        y: 158
+        width: 1610
+        height: 1353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.515625, y: 118.051254}
+        - {x: 48.515625, y: 119.051254}
+        - {x: 41.515625, y: 119.051254}
+        - {x: 37.515625, y: 112.051254}
+        - {x: 36.515625, y: 103.051254}
+        - {x: 22.515625, y: 119.051254}
+        - {x: -15.484375, y: 119.051254}
+        - {x: -125.484375, y: 56.051254}
+        - {x: -140.48438, y: 36.051254}
+        - {x: -140.48438, y: -117.948746}
+        - {x: 103.515625, y: -117.948746}
+        - {x: 141.51562, y: -31.948746}
+        - {x: 141.51562, y: 34.051254}
+    - name: Rabbit_Idle_Blink_Sprite_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 10014
+        y: 158
+        width: 1605
+        height: 1358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66.691284, y: -114.448746}
+        - {x: 67.691284, y: -107.448746}
+        - {x: 132.69128, y: -46.448746}
+        - {x: 140.69128, y: -29.448746}
+        - {x: 140.69128, y: 25.551254}
+        - {x: 47.691284, y: 119.551254}
+        - {x: -20.308716, y: 119.551254}
+        - {x: -140.30872, y: 27.551254}
+        - {x: -140.30872, y: -118.448746}
+        - {x: -66.308716, y: -118.448746}
+        - {x: -53.308716, y: -112.448746}
+        - {x: -7.308716, y: -118.448746}
+        - {x: 48.691284, y: -118.448746}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
