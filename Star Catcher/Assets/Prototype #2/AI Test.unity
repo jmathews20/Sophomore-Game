@@ -13,7 +13,11 @@ SceneSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
   serializedVersion: 7
+=======
+  serializedVersion: 6
+>>>>>>> master
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -37,12 +41,21 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
   m_GIWorkflowMode: 0
+=======
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 6
+  m_GIWorkflowMode: 1
+  m_LightmapsMode: 1
+>>>>>>> master
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -53,11 +66,16 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
+<<<<<<< HEAD
     serializedVersion: 4
+=======
+    serializedVersion: 3
+>>>>>>> master
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
     m_TextureHeight: 1024
+<<<<<<< HEAD
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -70,6 +88,15 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
+=======
+    m_AOMaxDistance: 1
+    m_Padding: 2
+    m_CompAOExponent: 0
+    m_LightmapParameters: {fileID: 0}
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherRayCount: 1024
+>>>>>>> master
     m_ReflectionCompression: 2
   m_LightingDataAsset: {fileID: 0}
   m_RuntimeCPUUsage: 25
@@ -79,7 +106,11 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     agentRadius: 0.09
+=======
+    agentRadius: 0.5
+>>>>>>> master
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -87,6 +118,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
+<<<<<<< HEAD
     cellSize: 0.030000001
     manualCellSize: 0
   m_NavMeshData: {fileID: 23800000, guid: 188f1cb05c48441439ab6ca0c9aef27f, type: 2}
@@ -790,3 +822,8 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 0}
+=======
+    cellSize: 0.16666667
+    manualCellSize: 0
+  m_NavMeshData: {fileID: 0}
+>>>>>>> master
