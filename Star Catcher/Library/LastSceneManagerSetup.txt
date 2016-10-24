@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: 'Assets/Prototype #2/Prototype 2.unity'
+=======
+- path: 'Assets/Prototype #2/TESTING/ThingsNotToDo.unity'
+>>>>>>> master
   isLoaded: 1
   isActive: 1
