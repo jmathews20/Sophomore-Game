@@ -5,7 +5,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     //This is the character controller component 
-    private CharacterController myCC;
+    public CharacterController myCC;
     //Temp var of datatype vector3 to move the character 
     private Vector3 tempPos;
     //Speed of the temp var in X 
@@ -17,8 +17,7 @@ public class PlayerControl : MonoBehaviour
     //Sliding Vars 
     public int slideDuration = 100;
     public float slideTime = 0.01f;
-
-    private Animator anim;
+	public bool Jumping = false;
 
     //Corountine for Sliding the character 
     IEnumerator Slide()
@@ -44,14 +43,12 @@ public class PlayerControl : MonoBehaviour
         slideDuration = durationTemp;
     }
 
-
     // Use this for initialization 
     void Start()
     {
 
         //This "Finds" the character controller component 
         myCC = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame 
@@ -69,7 +66,6 @@ public class PlayerControl : MonoBehaviour
         //Start Sliding 
         if (Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.S))
         {
-            anim.SetBool("Idle", false);
             //StartCoroutine is a function that calls a Coroutine 
             StartCoroutine(Slide());
 
@@ -87,6 +83,7 @@ public class PlayerControl : MonoBehaviour
         {
             //reset the jumpcount if grounded 
             jumpCount = 0;
+			Jumping = false;
         }
 
         //adding the gravity var to the y position of the tempPos var 

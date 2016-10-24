@@ -19,7 +19,7 @@ TagManager:
   - EnemyToGround
   - EnemyToPlayer
   - Ground
-  - 
+  - ZAxisLock
   - 
   - 
   - 
