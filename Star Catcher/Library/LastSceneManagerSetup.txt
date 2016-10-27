@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-<<<<<<< HEAD
-- path: 'Assets/Prototype #2/Prototype 2.unity'
-=======
-- path: 'Assets/Prototype #2/TESTING/ThingsNotToDo.unity'
->>>>>>> master
-=======
-- path: 'Assets/Prototype #2/Splash Scree.unity'
->>>>>>> master
+- path: Assets/AI TESTNESS.unity
   isLoaded: 1
   isActive: 1
