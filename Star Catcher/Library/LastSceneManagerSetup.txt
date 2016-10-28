@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AI TESTNESS.unity
+- path: 'Assets/Prototype #2/Prototype 2.unity'
   isLoaded: 1
   isActive: 1
