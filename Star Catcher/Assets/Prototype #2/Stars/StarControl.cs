@@ -45,9 +45,6 @@ public class StarControl : MonoBehaviour
     void OnCollisionEnter()
     {
         anims.SetBool("Destory", true);
-        //canAddForce = false;
-        //gameObject.SetActive(false);
-        //Destroy(gameObject, endTime);
     }
 
 

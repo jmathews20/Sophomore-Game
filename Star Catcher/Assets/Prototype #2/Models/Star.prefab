@@ -143,8 +143,8 @@ MonoBehaviour:
   - {fileID: 0}
   stars:
   - {fileID: 1000011811633606}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1000012913725028, guid: 94869c42634a04eb4964aaac30d8a399, type: 2}
+  - {fileID: 1000013569797052, guid: f20355c87603c49bdb2c5c179255dfc0, type: 2}
   spawnFrequency: 3
   canSpawnStars: 1
 --- !u!114 &114000012989702350
