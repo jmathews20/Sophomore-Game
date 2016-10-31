@@ -6,7 +6,7 @@ public class CloneStar : MonoBehaviour
 
     public Transform[] spawnPoints;
     public GameObject[] stars;
-    public float spawnFrequency = 1;
+    public float spawnFrequency = 3;
     public bool canSpawnStars = true;
 
     private int i = 0;
