@@ -37,7 +37,7 @@ public class StarController : MonoBehaviour {
         {
             yield return new WaitForSeconds(1);
             stars[starNum].position = spawners[0].position;
-            stars[starNum].GetComponent<MeshRenderer>().enabled = true;
+			stars[starNum].GetComponent<SpriteRenderer>().enabled = true;
 
             if(starNum < stars.Count-1)
             {
@@ -56,6 +56,7 @@ public class StarController : MonoBehaviour {
             {
                 spawnerNum = 0;
             }
+				
         }
     }
 }

@@ -9,7 +9,8 @@ public class Star : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponent<MeshRenderer>().enabled = false;
+
+		GetComponent<SpriteRenderer>().enabled = false;
         if(SendStar != null)
             SendStar(transform);
 	

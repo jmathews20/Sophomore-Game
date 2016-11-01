@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StarControl : MonoBehaviour
+public class StarTorque : MonoBehaviour
 {
 
     public int forceTime = 10;
