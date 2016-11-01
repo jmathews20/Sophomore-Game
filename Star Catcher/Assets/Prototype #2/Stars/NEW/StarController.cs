@@ -7,6 +7,8 @@ public class StarController : MonoBehaviour {
     public List<Transform> spawners;
     public List<Transform> stars;
 
+    private int i = 0;
+
     void SpawnerHandler (Transform _t)
     {
         spawners.Add(_t);
@@ -35,8 +37,8 @@ public class StarController : MonoBehaviour {
     {
         while (canSpawn)
         {
-            yield return new WaitForSeconds(1);
-            stars[starNum].position = spawners[0].position;
+            yield return new WaitForSeconds(2);
+            stars[starNum].position = spawners [i].position;
 			stars[starNum].GetComponent<SpriteRenderer>().enabled = true;
 
             if(starNum < stars.Count-1)

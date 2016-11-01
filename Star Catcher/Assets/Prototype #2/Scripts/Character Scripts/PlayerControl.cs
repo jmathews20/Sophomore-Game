@@ -46,7 +46,6 @@ public class PlayerControl : MonoBehaviour
     // Use this for initialization 
     void Start()
     {
-
         //This "Finds" the character controller component 
         myCC = GetComponent<CharacterController>();
     }
@@ -54,6 +53,10 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame 
     void Update()
     {
+        Vector3 pos = transform.position;
+        pos.z = 0;
+        transform.position = pos;
+
         //waiting for input and comparing jumpcount 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax - 1)
         {

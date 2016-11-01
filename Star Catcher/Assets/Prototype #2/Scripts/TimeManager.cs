@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour {
 
@@ -28,7 +29,9 @@ public class TimeManager : MonoBehaviour {
 
         seconds -= Time.deltaTime;
 
-        theText.text = "" + minutes +":"+ seconds;
+        theText.text = "" + minutes +":"+ System.Math.Round(seconds, 2);
 
+        if (minutes <= 0 && seconds <= 0.1)
+            SceneManager.LoadScene("Splash Scree");
 	}
 }
