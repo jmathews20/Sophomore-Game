@@ -34,6 +34,7 @@ public class CloneStar : MonoBehaviour
     }
     void Start()
     {
+		stars [j].SetActive (false);
         StartCoroutine(SpawnStars());
     }
 

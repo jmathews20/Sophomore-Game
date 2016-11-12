@@ -10,7 +10,6 @@ public class PlayerControl : MonoBehaviour
     private Vector3 tempPos;
     //Speed of the temp var in X 
     public float speed = 1;
-    public float gravity = 1;
     public float jumpSpeed = 1;
     public int jumpCount = 0;
     public int jumpCountMax = 2;
@@ -90,7 +89,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         //adding the gravity var to the y position of the tempPos var 
-        tempPos.y -= gravity;
+
         //adding the speed var to the tempPos var x value with the right and left arrow keys 
         tempPos.x = speed * Input.GetAxis("Horizontal");
         //Moves the character controller at an even pace (deltaTime) 
