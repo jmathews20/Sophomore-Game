@@ -8,12 +8,11 @@ public class StarVanish : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         StartCoroutine (HitGroundWait());
-        print("Hit");
     }
 
        IEnumerator HitGroundWait()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         starEnable.SetActive(false);
     }
 

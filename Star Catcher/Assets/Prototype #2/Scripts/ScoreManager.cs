@@ -5,11 +5,14 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
 	public static int score;
+    StealStar stealStarScript;
 
 	Text text;
 
 	void Start()
 	{
+        stealStarScript = GetComponent<StealStar>();
+
 		text = GetComponent<Text>();
 
 		score = 0;
@@ -28,4 +31,8 @@ public class ScoreManager : MonoBehaviour {
 		score += pointsToAdd;
 	}
 
+    public static void SubtractPoints (int pointsToSub)
+    {
+        score -= pointsToSub;
+    }
 }

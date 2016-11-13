@@ -11,11 +11,9 @@ public class StarTorque : MonoBehaviour
     public float torqueRange = 2;
     private Vector3 forceVector;
     private Vector3 torqueVector;
-    private Animator anims;
 
     void Start()
     {
-        anims = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody>();
         StartCoroutine(RunRandomForce());
     }
@@ -38,13 +36,7 @@ public class StarTorque : MonoBehaviour
 
     public void Deactivate()
     {
-        anims.SetBool("Destory", false);
         gameObject.SetActive(false);
-    }
-
-    void OnCollisionEnter()
-    {
-        anims.SetBool("Destory", true);
     }
 
 

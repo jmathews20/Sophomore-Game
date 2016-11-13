@@ -13,6 +13,12 @@ public class RabbitAnimation : MonoBehaviour {
 		myAnimator = GetComponent<Animator>();
 
 	}
+
+   void DamageAnimation()
+    {
+        myAnimator.SetBool("Damaged", true);
+        myAnimator.SetBool("Damaged", false);
+    }
 	
 	// Update is called once per frame
 	void Update () {

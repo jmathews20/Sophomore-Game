@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
     public float slideTime = 0.01f;
 	public bool Jumping = false;
 
+    public float gravity = -1;
+
     //Corountine for Sliding the character 
     IEnumerator Slide()
     {
@@ -89,7 +91,7 @@ public class PlayerControl : MonoBehaviour
         }
 
         //adding the gravity var to the y position of the tempPos var 
-
+        tempPos.y += gravity*Time.deltaTime*9.8f;
         //adding the speed var to the tempPos var x value with the right and left arrow keys 
         tempPos.x = speed * Input.GetAxis("Horizontal");
         //Moves the character controller at an even pace (deltaTime) 

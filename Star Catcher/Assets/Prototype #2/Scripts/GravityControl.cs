@@ -6,7 +6,7 @@ public class GravityControl : MonoBehaviour {
 
 	CharacterController myCC;
 	Vector3 tempPos;
-	public float gravity = 1;
+	public float gravity = 9.8f;
 
 	// Use this for initialization
 	void Start () {
