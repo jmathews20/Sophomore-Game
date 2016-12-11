@@ -12,7 +12,7 @@ public class StarVanish : MonoBehaviour {
 
        IEnumerator HitGroundWait()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(3);
         starEnable.SetActive(false);
     }
 

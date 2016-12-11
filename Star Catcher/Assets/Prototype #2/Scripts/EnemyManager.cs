@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnemyManager : MonoBehaviour {
 
@@ -11,16 +12,17 @@ public class EnemyManager : MonoBehaviour {
 	private int i = 0;
 	private int j = 0;
 
+    public static Action wolfAction;
 
 	IEnumerator SpawnStars()
 	{
-        yield return new WaitForSeconds(Random.Range (10, 30));
+        yield return new WaitForSeconds(UnityEngine.Random.Range (10, 30));
 		while (canSpawnEnemy = true)
 		{
-			i = Random.Range(0, spawnPoints.Length);
+			i = UnityEngine.Random.Range(0, spawnPoints.Length);
 			enemy[j].SetActive(true);
 			enemy[j].transform.position = spawnPoints[i].position;
-            enemy[0].transform.Rotate(Vector3.up, -180);
+            wolfAction(); //Action Delegate Sending...
 
 			if (j < enemy.Length - 1)
 			{
@@ -31,7 +33,7 @@ public class EnemyManager : MonoBehaviour {
 				j = 0;
 			}
 			//Instantiate(star, spawnPoints[i].position, Quaternion.identity);
-			yield return new WaitForSeconds(Random.Range (5, spawnTimeMax));
+			yield return new WaitForSeconds(UnityEngine.Random.Range (10, spawnTimeMax));
 		}
 	}
 	void Start()
@@ -39,26 +41,4 @@ public class EnemyManager : MonoBehaviour {
 		enemy [j].SetActive (false);
 		StartCoroutine(SpawnStars());
 	}
-
-
-
-
-	/*
-	// Use this for initialization
-	void Start () {
-		InvokeRepeating ("Spawn", spawnTime, spawnTime);
-	}
-	
-	void Spawn()
-	{
-			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
-			Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
-			DestroyEnemy ();
-	}
-			
-		void DestroyEnemy()
-		{
-			Destroy (enemy, 5f);
-		}
-	*/
 }

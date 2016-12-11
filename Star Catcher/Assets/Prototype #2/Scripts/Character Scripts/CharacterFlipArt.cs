@@ -6,8 +6,14 @@ public class CharacterFlipArt : MonoBehaviour {
 	public Transform characterArt;
 	public bool forward = true;
 
+    void Start()
+    {
+        UserInput.UserInputs += FlipCharacter;
+    }
 
-	void FlipCharacter (KeyCode _keyCode)
+
+
+        void FlipCharacter (KeyCode _keyCode)
 	{
 		switch (_keyCode)
 		{
@@ -26,11 +32,7 @@ public class CharacterFlipArt : MonoBehaviour {
 			}
 			break;
 		}
-	}
 
-	void Start ()
-	{
-		UserInput.UserInputs += FlipCharacter;
 	}
 
 	void OnDestroy()

@@ -5,7 +5,17 @@ public class StarGravity : MonoBehaviour
 {
 
     Vector3 tempPos;
-    public float gravity = 1;
+    public float gravity = 0;
+
+    void Start()
+    {
+        PauseGame.startCountdown += startCountdownHandler;
+    }
+
+    void startCountdownHandler()
+    {
+        gravity = 3;
+    }
 
     void OnCollisionEnter()
     {

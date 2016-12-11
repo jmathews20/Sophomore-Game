@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class StealStar : MonoBehaviour {
+public class StealStar : MonoBehaviour
+{
 
     public int pointsToSub;
     public RabbitAnimation rabbitAnimationScript;
+    public bool hitPlayer = false;
 
     void Start()
     {
@@ -14,7 +16,19 @@ public class StealStar : MonoBehaviour {
 
     void OnTriggerEnter()
     {
-        ScoreManager.SubtractPoints(pointsToSub);
-        print("commmon!!");
+        StartCoroutine(waitToAttack());
+    }
+
+    IEnumerator waitToAttack()
+    {
+        if (hitPlayer != true)
+        {
+            ScoreManager.SubtractPoints(pointsToSub);
+            hitPlayer = true;
+        }
+
+        yield return new WaitForSeconds(5f);
+
+        hitPlayer = false;
     }
 }

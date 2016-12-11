@@ -3,8 +3,14 @@ using System.Collections;
 
 public class CameraMove : MonoBehaviour {
 
-	public float cameraMoveSpeed = 8f;
+	public float cameraMoveSpeed = 0f;
 	private Vector3 tempPos;
+
+    void Start()
+    {
+        PauseGame.pauseDelegate += pauseDelegateHandler;
+        PauseGame.startCountdown += startCountdownHandler;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -13,4 +19,15 @@ public class CameraMove : MonoBehaviour {
         transform.Translate(tempPos);
 
 	}
+
+    void startCountdownHandler()
+    {
+        cameraMoveSpeed = 8f;
+    }
+
+
+    void pauseDelegateHandler()
+    {
+        cameraMoveSpeed = 0f;
+    }
 }

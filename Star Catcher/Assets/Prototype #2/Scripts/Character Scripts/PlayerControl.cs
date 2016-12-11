@@ -9,14 +9,14 @@ public class PlayerControl : MonoBehaviour
     //Temp var of datatype vector3 to move the character 
     private Vector3 tempPos;
     //Speed of the temp var in X 
-    public float speed = 1;
-    public float jumpSpeed = 1;
+    public static float speed = 0;
+    public static float jumpSpeed = 0;
     public int jumpCount = 0;
     public int jumpCountMax = 2;
     //Sliding Vars 
     public int slideDuration = 100;
     public float slideTime = 0.01f;
-	public bool Jumping = false;
+	public static bool Grounded;
 
     public float gravity = -1;
 
@@ -47,8 +47,15 @@ public class PlayerControl : MonoBehaviour
     // Use this for initialization 
     void Start()
     {
+        PauseGame.startCountdown += startCountdownHandler;
         //This "Finds" the character controller component 
         myCC = GetComponent<CharacterController>();
+    }
+
+    void startCountdownHandler()
+    {
+        speed = 37;
+        jumpSpeed = 33;
     }
 
     // Update is called once per frame 
@@ -57,9 +64,26 @@ public class PlayerControl : MonoBehaviour
         Vector3 pos = transform.position;
         pos.z = 0;
         transform.position = pos;
+        //test if the character controller is grounded
+        if(myCC.isGrounded)
+        {
+            Grounded = true;
+            tempPos.y = 0;
+        }
+
+        else
+        {
+            Grounded = false;
+        }
+         
+        if (myCC.isGrounded)
+        {
+            //reset the jumpcount if grounded 
+            jumpCount = 0;
+        }
 
         //waiting for input and comparing jumpcount 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax - 1)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax)
         {
             //incrementing the jumpcount by 1 
             jumpCount++;
@@ -81,14 +105,6 @@ public class PlayerControl : MonoBehaviour
             StartCoroutine(Slide());
         }
 
-
-        //test if the character controller is grounded 
-        if (myCC.isGrounded)
-        {
-            //reset the jumpcount if grounded 
-            jumpCount = 0;
-			Jumping = false;
-        }
 
         //adding the gravity var to the y position of the tempPos var 
         tempPos.y += gravity*Time.deltaTime*9.8f;

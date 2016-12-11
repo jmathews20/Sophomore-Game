@@ -1,4 +1,4 @@
 sceneSetups:
-- path: 'Assets/Prototype #2/Prototype 2.unity'
+- path: 'Assets/Prototype #2/Splash Scree.unity'
   isLoaded: 1
   isActive: 1

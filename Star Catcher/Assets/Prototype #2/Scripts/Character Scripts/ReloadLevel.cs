@@ -2,9 +2,9 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Respawn : MonoBehaviour {
+public class ReloadLevel : MonoBehaviour {
 
-void OnTriggerEnter()
+    public void ReloadLevelFunction()
     {
         SceneManager.LoadScene("Prototype 2");
     }
