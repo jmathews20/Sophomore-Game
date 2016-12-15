@@ -10,8 +10,8 @@ public class TaskB : MonoBehaviour {
     public static IEnumerator WaitingLodge()
     {
         yield return new WaitForSeconds(8f);
+ 
         openDoorB();
         MoveCameraDestination();
-        print("Is is working?");
     }
 }

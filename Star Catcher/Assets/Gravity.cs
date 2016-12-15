@@ -25,7 +25,6 @@ public class Gravity : MonoBehaviour
         {
             tempPos.y = 0;
         }
-        print(myCC.velocity);
         myCC.Move(tempPos);
     }
 }

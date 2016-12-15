@@ -12,15 +12,46 @@ public class TimeManager : MonoBehaviour {
     private Text theText;
     private float secTemp;
 
+    public Text scoreAmt;
+    public Text XText;
+    public Image StarImage;
+
     // Use this for initialization
     void Start () {
 
-    theText = GetComponent<Text>();
+        theText = GetComponent<Text>();
        // seconds = 60f;
         currentTime = timeInSeconds;
         StartCoroutine(CountDownCoroutine());
 
+        DropMenu.stopTimer += stopTimeHandler;
+
 	}
+
+    void stopTimeHandler()
+    {
+        if (scoreAmt != null)
+        {
+            scoreAmt.enabled = false;
+        }
+        if (XText != null)
+        {
+            XText.enabled = false;
+        }
+        if (StarImage != null)
+        {
+            StarImage.enabled = false;
+        }
+        if (theText != null)
+            {
+            theText.enabled = false;
+        }
+    }
+
+    void OnDestroy()
+    {
+        DropMenu.stopTimer -= stopTimeHandler;
+    }
 
     IEnumerator CountDownCoroutine()
     {

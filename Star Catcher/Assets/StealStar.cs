@@ -8,6 +8,7 @@ public class StealStar : MonoBehaviour
     public int pointsToSub;
     public RabbitAnimation rabbitAnimationScript;
     public bool hitPlayer = false;
+    public AudioSource rabbitHurtSound;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class StealStar : MonoBehaviour
         if (hitPlayer != true)
         {
             ScoreManager.SubtractPoints(pointsToSub);
+            rabbitHurtSound.Play();
             hitPlayer = true;
         }
 

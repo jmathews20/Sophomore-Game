@@ -4,10 +4,12 @@ using System.Collections;
 public class RabbitHurt : MonoBehaviour {
 
     private Animator myAnimator;
+    public AudioSource rabbitHurtSound;
 
     void Start()
     {
-        myAnimator = GetComponent<Animator>();
+        if (GetComponent<Animator>() != null)
+            myAnimator = GetComponent<Animator>();
 
     }
 

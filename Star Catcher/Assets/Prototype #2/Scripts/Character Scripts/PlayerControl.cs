@@ -20,6 +20,10 @@ public class PlayerControl : MonoBehaviour
 
     public float gravity = -1;
 
+    public AudioSource snowStepSound;
+    public AudioSource landSound;
+    public bool running = false;
+
     //Corountine for Sliding the character 
     IEnumerator Slide()
     {
@@ -69,6 +73,7 @@ public class PlayerControl : MonoBehaviour
         {
             Grounded = true;
             tempPos.y = 0;
+
         }
 
         else
@@ -105,11 +110,16 @@ public class PlayerControl : MonoBehaviour
             StartCoroutine(Slide());
         }
 
+        if (myCC.velocity.x != 0 && myCC.isGrounded && !snowStepSound.isPlaying)
+        {
+            snowStepSound.Play();
+        }
 
         //adding the gravity var to the y position of the tempPos var 
         tempPos.y += gravity*Time.deltaTime*9.8f;
         //adding the speed var to the tempPos var x value with the right and left arrow keys 
         tempPos.x = speed * Input.GetAxis("Horizontal");
+
         //Moves the character controller at an even pace (deltaTime) 
         myCC.Move(tempPos * Time.deltaTime);
     }

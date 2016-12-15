@@ -13,6 +13,9 @@ public class DisplayText : MonoBehaviour {
         OpenDoor.DoorOpenText += DoorOpenTextHandler;
         TasksA.PressEnterText += PressEnterTextHandler;
         NextRoomMove.PleaseWaitText += PleaseWaitTextHandler;
+        TaskC.LightsInstructions += LightsInstructionsHandler;
+        TaskD.sendMessage += sendMessageHandler;
+        TaskD.Room4Instructions += Room4InstructionsHandler;
 
     }
 
@@ -30,6 +33,21 @@ public class DisplayText : MonoBehaviour {
 
     {
         myText.text = "Please Wait";
+    }
+
+    void LightsInstructionsHandler()
+    {
+        myText.text = "Turn on all Lights, then press Enter ";
+    }
+
+    void Room4InstructionsHandler()
+    {
+        myText.text = "Find the Student with a Good Attitude";
+    }
+
+    void sendMessageHandler(string message)
+    {
+        myText.text = message;
     }
 
 

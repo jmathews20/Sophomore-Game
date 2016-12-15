@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class StartButton : MonoBehaviour {
 
     public Button startButton;
+    public AudioSource startButtonSound;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,18 @@ public class StartButton : MonoBehaviour {
 
     void TaskOnClick()
     {
+        StartCoroutine(StartGameDelay());
+    }
+
+    void playSound()
+    {
+        startButtonSound.Play();
+    }
+
+    IEnumerator StartGameDelay()
+    {
+        playSound();
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Prototype 2");
-        print("You Clicked it!");
     }
 }

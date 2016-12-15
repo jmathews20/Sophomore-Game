@@ -21,6 +21,11 @@ public class RecycleLevelObject : MonoBehaviour
         recyclableList.Add(_r);
     }
 
+    void OnDestroy()
+    {
+                Recycler.RecycleAction -= RecycleActionHandler;
+    }
+
     void OnTriggerEnter()
     {
         i = UnityEngine.Random.Range(0, recyclableList.Count - 1);

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class StarCollect : MonoBehaviour {
 
@@ -9,6 +10,8 @@ public class StarCollect : MonoBehaviour {
 	public GameObject starEnable;
 	private StarController StarControllerScript;
 
+    public static Action CollectSound;
+
 	void Start()
 	{
 		StarControllerScript = GetComponent<StarController> ();
@@ -16,13 +19,15 @@ public class StarCollect : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+        if (other.GetComponent<PlayerControl>() == null)
+            return;
+        {
 
-		if (other.GetComponent<PlayerControl> () == null)
-			return;
+            ScoreManager.AddPoints(pointsToAdd);
+            CollectSound();
 
-		ScoreManager.AddPoints (pointsToAdd);
-		
-		starEnable.gameObject.SetActive (false);
+             starEnable.gameObject.SetActive(false);
+        }
 	}
 
 }
