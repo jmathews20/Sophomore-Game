@@ -5,7 +5,7 @@ public class PlayerControl : MonoBehaviour
 {
 
     //This is the character controller component 
-    public CharacterController myCC;
+    public static CharacterController myCC;
     //Temp var of datatype vector3 to move the character 
     private Vector3 tempPos;
     //Speed of the temp var in X 
@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     public float gravity = -1;
 
     public AudioSource snowStepSound;
+    public AudioSource jumpSound;
     public AudioSource landSound;
     public bool running = false;
 
@@ -59,7 +60,7 @@ public class PlayerControl : MonoBehaviour
     void startCountdownHandler()
     {
         speed = 37;
-        jumpSpeed = 33;
+        jumpSpeed = 40;
     }
 
     // Update is called once per frame 
@@ -90,6 +91,7 @@ public class PlayerControl : MonoBehaviour
         //waiting for input and comparing jumpcount 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < jumpCountMax)
         {
+            jumpSound.Play();
             //incrementing the jumpcount by 1 
             jumpCount++;
             //adding the jumpSpeed var to the tempPos var 

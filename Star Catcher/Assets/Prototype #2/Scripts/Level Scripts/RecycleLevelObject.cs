@@ -12,6 +12,7 @@ public class RecycleLevelObject : MonoBehaviour
 
     void Start()
     {
+        StaticVars.nextSectionPosition = StaticVars.startPosition;
         recyclableList = new List<Recycler>();
         Recycler.RecycleAction += RecycleActionHandler;
     }

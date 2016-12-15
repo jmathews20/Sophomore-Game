@@ -16,13 +16,18 @@ public class StarVanish : MonoBehaviour {
         StartCoroutine (HitGroundWait());
     }
 
+    void OnEnable()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
+
        IEnumerator HitGroundWait()
     {
         yield return new WaitForSeconds(3);
         myAnimator.SetBool("Disapear", true);
         yield return new WaitForSeconds(1f);
-        starEnable.SetActive(false);
         myAnimator.SetBool("Disapear", false);
+        starEnable.SetActive(false);
     }
 
 	// Update is called once per frame

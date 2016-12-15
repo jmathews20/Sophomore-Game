@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator waitToSpawn()
     {
-        yield return new WaitForSeconds(Random.Range(5f, 40f));
+        yield return new WaitForSeconds(Random.Range(10f, 40f));
         wolfHowl.Play();
         yield return new WaitForSeconds(2f);
         spawnEnemy();

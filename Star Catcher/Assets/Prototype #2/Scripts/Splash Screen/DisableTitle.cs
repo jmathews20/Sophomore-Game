@@ -3,13 +3,23 @@ using System.Collections;
 
 public class DisableTitle : MonoBehaviour {
 
-    private Animator myAnimator;
-
+    public Animator myAnimator;
+    public SpriteRenderer myRender;
 
     void Start()
     {
-        WhiteFade.startSplash += startSplashHandler;
+        myRender = GetComponent<SpriteRenderer>();
+        myRender.enabled = true;
         myAnimator = GetComponent<Animator>();
+        WhiteFade.startSplash += startSplashHandler;
+    }
+
+   
+    void OnDestroy()
+    {
+        myRender = null;
+        myAnimator = null;
+        WhiteFade.startSplash -= startSplashHandler;
     }
 
     void startSplashHandler()
@@ -23,7 +33,7 @@ public class DisableTitle : MonoBehaviour {
     {
         // suspend execution for 5 seconds
         yield return new WaitForSeconds(3);
-        gameObject.SetActive(false);
+        myAnimator.enabled = false;
 
     }
 }

@@ -35,10 +35,16 @@ public class RabbitAnimation : MonoBehaviour {
 		else
 			myAnimator.SetFloat ("RunSpeed", 0f);
 
-		if (playerControlScript.myCC.isGrounded && canRun == true)
-			myAnimator.SetBool ("JumpTrue", false);
-		else
-			myAnimator.SetBool ("JumpTrue", true);
+        if ((Input.GetKeyDown(KeyCode.Space)) && PlayerControl.Grounded == false)
+        {
+            myAnimator.SetBool("JumpTrue", true);
+        }
+ 
+
+        if(PlayerControl.Grounded == true)
+        {
+            myAnimator.SetBool("JumpTrue", false);
+        }
 
 
 	}

@@ -13,6 +13,11 @@ public class CanvasFade : MonoBehaviour {
         StartCoroutine(FadeIn());
     }
 
+    void OnDestroy()
+    {
+        WhiteFade.startSplash -= startSplashHandler;
+    }
+
     IEnumerator FadeIn()
     {
         CanvasGroup canvasGroup = GetComponent<CanvasGroup>();

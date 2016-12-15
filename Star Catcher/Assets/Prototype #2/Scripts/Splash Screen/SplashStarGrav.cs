@@ -11,6 +11,11 @@ public class SplashStarGrav : MonoBehaviour
         WhiteFade.startSplash += startSplashHandler;
     }
 
+    void OnDestroy()
+    {
+        WhiteFade.startSplash -= startSplashHandler;
+    }
+
     void startSplashHandler()
     {
         gravity = 20;

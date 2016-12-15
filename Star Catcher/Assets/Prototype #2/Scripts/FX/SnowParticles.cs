@@ -14,7 +14,7 @@ public class SnowParticles : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-           if (PlayerControl.Grounded == true && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.RightArrow)))
+           if (PlayerControl.Grounded == true && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
          {
              gameObject.GetComponent<ParticleSystem>().enableEmission = true;
          }

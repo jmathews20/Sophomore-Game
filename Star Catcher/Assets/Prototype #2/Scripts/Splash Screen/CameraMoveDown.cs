@@ -17,6 +17,11 @@ public class CameraMoveDown : MonoBehaviour {
         StartCoroutine(CameraMove(cameraEndPos));
     }
 
+    void OnDestroy()
+    {
+        WhiteFade.startSplash -= startSplashHandler;
+    }
+
     IEnumerator CameraMove(Transform cameraEndPos)
     {
         yield return new WaitForSeconds(3f);

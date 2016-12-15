@@ -22,7 +22,7 @@ public class CameraMove : MonoBehaviour {
 
     void startCountdownHandler()
     {
-        cameraMoveSpeed = 8f;
+        cameraMoveSpeed = 11f;
     }
 
 
